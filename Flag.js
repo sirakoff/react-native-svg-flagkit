@@ -15,7 +15,7 @@ export default class Flag extends Component {
 
         width: PropTypes.number,
         height: PropTypes.number,
-
+        style: PropTypes.object,
         onPress: PropTypes.func
     };
 
@@ -44,6 +44,7 @@ export default class Flag extends Component {
     render() {
         return (
             <TouchableOpacity
+                style={this.props.style}
                 disabled={!this.props.onPress}
                 onPress={this._onPress}
             >
